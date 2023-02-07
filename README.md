@@ -1,6 +1,6 @@
 # index-bloom-toy
 
-sandboxing different data structures for chunk lookup
+Sandboxing different data structures for chunk lookup
 
 Search benchmarks:
 ```
