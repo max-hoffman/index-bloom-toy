@@ -89,11 +89,10 @@ type bloomTableIndex struct {
 
 var _ tableIndex = (*bloomTableIndex)(nil)
 
-const bloomCapacity = 100000
-const bloomFalsePositiveRate = 0.01
+const bloomFalsePositiveRate = 0.1
 
 func newBloomTableIndex(p []prefix) *bloomTableIndex {
-	filter := bloom.NewWithEstimates(bloomCapacity, bloomFalsePositiveRate)
+	filter := bloom.NewWithEstimates(uint(len(p)), bloomFalsePositiveRate)
 	for _, p := range p {
 		filter.Add(p[:])
 	}
