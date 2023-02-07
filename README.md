@@ -16,6 +16,7 @@ BenchmarkTableIndexSearch/hashIndex_search-12           	  367981	      3431 ns/
 BenchmarkTableIndexSearch/bloomIndex_search
 BenchmarkTableIndexSearch/bloomIndex_search-12          	  100902	     12379 ns/op
 ```
+First column is number of iterations (more is better). Second column is CPU cycles per iteration (less is better).
 
 Setup benchmarks:
 ```
@@ -31,3 +32,5 @@ BenchmarkTableIndexSetup/hashIndex_setup-12           	       1	4275124567 ns/op
 BenchmarkTableIndexSetup/bloomIndex_setup
 BenchmarkTableIndexSetup/bloomIndex_setup-12          	       1	5721139682 ns/op	209779368 B/op	    2804 allocs/op
 ```
+
+Last column is most relevent. Lower allocs/op is better.
